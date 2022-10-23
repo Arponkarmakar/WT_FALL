@@ -21,15 +21,8 @@ include("process.php");
 
 
 <tr>
-<td><lable for="name">NAME:- </lable></td> 
-<td><select name="title">
-    <option value="mr">MR</option>
-    <option value="mr.s">MR.S</option>
-    <option value="mam">MAM</option>
-    <option value="saiheb">SAIHEB</option>
-</select>
-    
-<input type="text" name="name" placeholder="enter name"></td>
+<td><lable for="name"> NAME:- </lable></td>  
+<td><input type="text" name="name" placeholder="enter name"></td>
 <td><?php echo $nameError;?></td>
 </tr>
 
@@ -45,11 +38,6 @@ include("process.php");
 <td><?php echo $mnameError;?></td>
 </tr>
 
-<tr>
-<td><lable for="dob">DOB:- </lable></td>   
-<td><input type="date" name="dob" ></td>
-
-</tr>
 
 <tr>
 <td><lable for="gender">GENDER:- </lable></td>   
@@ -61,20 +49,11 @@ include("process.php");
 <tr>
 <td><lable for="education">EDUCATION:- </lable></td> 
 <td>  
-  <input type="checkbox" name="ssc" >SSC<input type="text" name="ssc" placeholder="enter cgpa"><?php echo $sscError;?> </br> 
-  <input type="checkbox" name="hsc" >HSC <input type="text" name="hsc" placeholder="enter cgpa"><?php echo $hscError;?> </br> 
-  <input type="checkbox" name="bsc" >BSC<input type="text" name="bsc" placeholder="enter cgpa"><?php echo $bscError;?> </br>  
-  <input type="checkbox" name="msc" >MSC<input type="text" name="msc" placeholder="enter cgpa"><?php echo $mscError;?></br>   
+  SSC<input type="text" name="ssc" placeholder="enter cgpa"><?php echo $sscError;?> </br> 
+  HSC <input type="text" name="hsc" placeholder="enter cgpa"><?php echo $hscError;?> </br> 
+  BSC<input type="text" name="bsc" placeholder="enter cgpa"><?php echo $bscError;?> </br>  
+  MSC<input type="text" name="msc" placeholder="enter cgpa"><?php echo $mscError;?></br>   
   <?php echo $educationError; ?>
-
-<?php echo $s;?>
-
-<?php echo $h;?>
-
-<?php echo $b;?>
-<?php echo $m;?>
-
-
 
 </td>
 </tr>
