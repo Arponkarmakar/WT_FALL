@@ -4,6 +4,7 @@ $nameError="";
 $fnameError="";
 $mnameError="";
 $addressError="";
+
 $nidError="";
 $passportError="";
 $mobileError="";
@@ -20,10 +21,7 @@ $hscError="";
 $bscError="";
 $mscError="";
 $educationError="";
-$s="";
-$h="";
-$b="";
-$m="";
+
 
 
 
@@ -211,29 +209,8 @@ else{
 }
 
 
-if(!isset($_POST["ssc"])&&!isset($_POST["hsc"])&&!isset($_POST["bsc"])&&!isset($_POST["msc"]))
-{
-    $educationError= "CHOOSE AT LEAST ANY ONE";
-    
-}
-else{
-   if(isset($_POST["ssc"]))
-   {
-       $s= $_POST["ssc"];
-   }
-   if(isset($_POST["hsc"]))
-   { 
-       $h= $_POST["hsc"];
-   }
-   if(isset($_POST["bsc"]))
-   {
-    $b= $_POST["bsc"];
-   }
-   if(isset($_POST["msc"]))
-   {
-    $m= $_POST["msc"];
-   }
-}
+
+
 
 
 }
@@ -241,3 +218,6 @@ else{
 
 
 ?>
+
+
+
