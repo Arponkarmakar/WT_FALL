@@ -21,6 +21,14 @@ $hscError="";
 $bscError="";
 $mscError="";
 $educationError="";
+$hasError=0;
+$myphpdata="";
+$NAME=0;
+$EMAIL=0;
+$MOBILE=0;
+$myjsondata="";
+
+
 
 
 
@@ -111,7 +119,7 @@ if (((isset($_REQUEST["submit"])))){
 
 
 
-    if(empty($_REQUEST["github"])|| ! preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $_REQUEST["github"])){
+    if(empty($_REQUEST["github"])|| ! preg_match("/[0-9a-z]/", $_REQUEST["github"])){
         $githubError="GITHUB ADDRESS IS NOT VALID";
 
     }
@@ -151,7 +159,7 @@ if (((isset($_REQUEST["submit"])))){
     }
 
 
-    if(empty($_REQUEST["ssc"])|| !preg_match("/[0-9]/",$_REQUEST["ssc"])||(strlen($_REQUEST["ssc"])>3)){
+    if(empty($_REQUEST["ssc"])|| !preg_match("/[0-9]/",$_REQUEST["ssc"])||(strlen($_REQUEST["ssc"])>4)){
         $sscError="ENTER CGPA";
       
 
@@ -161,7 +169,7 @@ if (((isset($_REQUEST["submit"])))){
        
     }
    
-    if(empty($_REQUEST["hsc"])|| !preg_match("/[0-9]/", $_REQUEST["hsc"])||(strlen($_REQUEST["hsc"])>3)){
+    if(empty($_REQUEST["hsc"])|| !preg_match("/[0-9]/", $_REQUEST["hsc"])||(strlen($_REQUEST["hsc"])>4)){
         
         $hscError="ENTER CGPA";
       
@@ -173,7 +181,7 @@ if (((isset($_REQUEST["submit"])))){
        
     }
    
-    if(empty($_REQUEST["bsc"])|| !preg_match("/[0-9]/", $_REQUEST["bsc"])||(strlen($_REQUEST["bsc"])>3)){
+    if(empty($_REQUEST["bsc"])|| !preg_match("/[0-9]/", $_REQUEST["bsc"])||(strlen($_REQUEST["bsc"])>4)){
         
         $bscError="ENTER CGPA";
       
@@ -186,7 +194,7 @@ if (((isset($_REQUEST["submit"])))){
     }
 
 
-    if(empty($_REQUEST["msc"])|| !preg_match("/[0-9]/", $_REQUEST["msc"])||(strlen($_REQUEST["msc"])>3)){
+    if(empty($_REQUEST["msc"])|| !preg_match("/[0-9]/", $_REQUEST["msc"])||(strlen($_REQUEST["msc"])>4)){
         
         $mscError="ENTER CGPA";
       
@@ -199,17 +207,16 @@ if (((isset($_REQUEST["submit"])))){
     }
 
 
-    if(isset($_REQUEST["submit"]))
+    if(isset($_REQUEST["gender"]))
     {
-        if(empty($_REQUEST["gender"]))
-        {
-            $genderError="CHOOSE GENDER";
+        
+       $genderError="GENDER IS" . $_REQUEST["gender"];
+           
         }
         else
         {
-            $genderError="GENDER IS". $_REQUEST["gender"];
+            $genderError="CHOOSE GENDER";
         }
-    }
 
 
 
