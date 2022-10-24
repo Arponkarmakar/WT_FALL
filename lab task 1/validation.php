@@ -40,9 +40,9 @@ include("process.php");
 
 
 <tr>
-<td><lable for="gender">GENDER:- </lable></td>   
-<td><input type="radio" name="male" >MALE
-<input type="radio" name="female" >FEMALE</td>
+<td><lable for="Gender">GENDER:- </lable></td>   
+<td><input type="radio" value="male" name="gender" >MALE
+<input type="radio" value="female" name="gender">FEMALE</td>
 <td><?php echo $genderError;?></td>
 </tr>
 
